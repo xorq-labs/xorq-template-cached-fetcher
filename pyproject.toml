@@ -17,3 +17,6 @@ build-backend = "hatchling.build"
 dev = [
     "ipython>=8.37.0",
 ]
+
+[tool.uv.sources]
+xorq = { git = "https://github.com/xorq-labs/xorq", branch = "feat/cli/sdist-artifact" }
