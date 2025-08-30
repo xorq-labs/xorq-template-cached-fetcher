@@ -68,7 +68,7 @@ tzdata==2025.2
 urllib3==2.5.0
 uv==0.7.20
 wcwidth==0.2.13
-xorq @ git+https://github.com/xorq-labs/xorq@9aac1d01b8969c1755c3f537f9cc90466604fb4c
+xorq @ git+https://github.com/xorq-labs/xorq@7d4c0328d7daf8341f8a3cfb65a4c944d37056ff
 xorq-datafusion==0.2.3
 xorq-hash-cache==0.1.0
 zipp==3.23.0

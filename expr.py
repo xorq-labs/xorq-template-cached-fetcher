@@ -1,4 +1,4 @@
-import xorq as xo
+import xorq.api as xo
 from xorq_template_cached_fetcher import (
     do_hackernews_fetcher_udxf,
 )
