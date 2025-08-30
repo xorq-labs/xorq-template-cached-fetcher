@@ -4,13 +4,14 @@ import pandas as pd
 import requests
 import toolz
 
-import xorq as xo
+import xorq
+import xorq.api as xo
 from xorq.common.utils.toolz_utils import curry
 from xorq_hash_cache.hash_cache import HashCached
 
 
 base_api_url = "https://hacker-news.firebaseio.com/v0"
-cache_dir = xo.common.utils.caching_utils.get_xorq_cache_dir().joinpath("./hackernews-items")
+cache_dir = xorq.common.utils.caching_utils.get_xorq_cache_dir().joinpath("./hackernews-items")
 
 
 def hello() -> str:
