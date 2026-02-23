@@ -157,7 +157,9 @@ cityhash==0.4.8 ; python_full_version < '4' \
 click==8.2.1 \
     --hash=sha256:27c491cc05d968d271d5a1db13e3b5a184636d9d930f148c50b038f0d0646202 \
     --hash=sha256:61a3265b914e850b85317d0b3109c7f8cd35a670f963866005d6ef1d5175a12b
-    # via dask
+    # via
+    #   dask
+    #   xorq
 cloudpickle==3.1.1 \
     --hash=sha256:b216fa8ae4019d5482a8ac3c95d8f6346115d8835911fd4aefd1a445e4242c64 \
     --hash=sha256:c8c5a44295039331ee9dad40ba100a9c7297b6f988e50e87ccdf3765a668350e
@@ -250,6 +252,14 @@ gast==0.6.0 ; sys_platform == 'darwin' \
 geoarrow-types==0.3.0 ; python_full_version < '4' \
     --hash=sha256:439df6101632080442beccc7393cac54d6c7f6965da897554349e94d2492f613 \
     --hash=sha256:82243e4be88b268fa978ae5bba6c6680c3556735e795965b2fe3e6fbfea9f9ee
+    # via xorq
+gitdb==4.0.12 \
+    --hash=sha256:5ef71f855d191a3326fcfbc0d5da835f26b13fbcba60c32c21091c349ffdb571 \
+    --hash=sha256:67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf
+    # via gitpython
+gitpython==3.1.46 \
+    --hash=sha256:400124c7d0ef4ea03f7310ac2fbf7151e09ff97f2a3288d64a440c584a29c37f \
+    --hash=sha256:79812ed143d9d25b6d176a10bb511de0f9c67b1fa641d82097b0ab90398a2058
     # via xorq
 googleapis-common-protos==1.70.0 \
     --hash=sha256:0e1b44e0ea153e6594f9f394fef15193a68aaaea2d843f83e2742717ca753257 \
@@ -480,7 +490,9 @@ opentelemetry-exporter-otlp-proto-common==1.34.1 \
 opentelemetry-exporter-otlp-proto-grpc==1.34.1 \
     --hash=sha256:04bb8b732b02295be79f8a86a4ad28fae3d4ddb07307a98c7aa6f331de18cca6 \
     --hash=sha256:7c841b90caa3aafcfc4fee58487a6c71743c34c6dc1787089d8b0578bbd794dd
-    # via opentelemetry-exporter-otlp
+    # via
+    #   opentelemetry-exporter-otlp
+    #   xorq
 opentelemetry-exporter-otlp-proto-http==1.34.1 \
     --hash=sha256:5251f00ca85872ce50d871f6d3cc89fe203b94c3c14c964bbdc3883366c705d8 \
     --hash=sha256:aaac36fdce46a8191e604dcf632e1f9380c7d5b356b27b3e0edb5610d9be28ad
@@ -754,6 +766,10 @@ six==1.17.0 \
     --hash=sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274 \
     --hash=sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81
     # via python-dateutil
+smmap==5.0.2 \
+    --hash=sha256:26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5 \
+    --hash=sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e
+    # via gitdb
 sqlglot==25.20.2 \
     --hash=sha256:169fe8308dd70d7bd40117b2221b62bdc7c4e2ea8eb07394b2a6146cdedf05ab \
     --hash=sha256:cdbfd7ce3f2f39f32bd7b4c23fd9e0fd261636a6b14285b914e8def25fd0a567
@@ -866,17 +882,20 @@ wcwidth==0.2.13 \
     --hash=sha256:3da69048e4540d84af32131829ff948f1e022c1c6bdb8d6102117aac784f6859 \
     --hash=sha256:72ea0c06399eb286d978fdedb6923a9eb47e1c486ce63e9b4e64fc18303972b5
     # via prompt-toolkit
-xorq @ git+https://github.com/xorq-labs/xorq@7eb477a587c4994a611cddc49b2494a7019f5b0d
+xorq @ git+https://github.com/xorq-labs/xorq@3ed851f14ea3f5cb7f72765da4fa043c74432eb2
     # via xorq-template-cached-fetcher
-xorq-datafusion==0.2.4 \
-    --hash=sha256:1c399d7adb9daea9b2aa1bb34c98d9c502356d8a6684b2b5c51bfd4056ac7f7c \
-    --hash=sha256:5de64bea59499e4d088f2530bf9480497ef187f19f74a740c354483cc6e156b7 \
-    --hash=sha256:7c10e2decd45dc03fd2c7506f02acc32191fa456fe734049701fc7241fc22585 \
-    --hash=sha256:83e67da6f04429444db4f3c4735b4f602f700a5a2291f42f0acbce969cba11a7 \
-    --hash=sha256:bc20c7f67e1576a615f21b3a49fec1729d9f0a5474a58eab921cd376f0317957 \
-    --hash=sha256:d779cd6150ff0fa5afca7a0e1bb4aeec850d3eaf666e05bb91ae6951f1139726 \
-    --hash=sha256:f20ee1ae15ea7bf86eb6d4e21763a9a8cef83ecb297ef44d6d10ec4b6e1971f6 \
-    --hash=sha256:f5726fb9608d7a2955f3b602e4283c029b730e85bb6c381c37b9da0d2767c45b
+xorq-datafusion==0.2.5 \
+    --hash=sha256:0e4354979c60164fb6f6aff7b116fc938fd5b204629033f7275f29370d18f860 \
+    --hash=sha256:3e81e69c58556494ad3728f8e27fbdbf779ca67fce33980c84e97dbb66883e70 \
+    --hash=sha256:87c32d30baaeec30f761771934d8e9b62b3d3436b474a413542927f9cc051fec \
+    --hash=sha256:8e88801cd628f39be1db2bdbc7443c80157c7f2441b41bacbd1576eb4e723b83 \
+    --hash=sha256:948a783380bb51dd0de827433414c01c28ed6660eaaa246faa0040e6daddb246 \
+    --hash=sha256:a6c295b438966fa4257443d0635d8c346d462afaf319831966a0908b064b14ec \
+    --hash=sha256:bc9b92ed0e09f53feb8049eab0d5c02bb75204fbaf8f80a96ee6ae33f239683d \
+    --hash=sha256:c456e4cff93e76abcc3b30c888d9c0a5fbdb77553bc8f22ff36dbbb1b5b4d7df \
+    --hash=sha256:e0d6b63766c43e3c36c66d38ba71b40699065bd1ce795efc22e1f9e91cb2479a \
+    --hash=sha256:e4717d8fdfce89ee500750bf189bf1719ba324c277381eeb1e5b2feb21ec53e6 \
+    --hash=sha256:e7206853ef20c48a38ed7b24fce0a743fdcd12de40c2015a034ae37a76e72573
     # via xorq
 xorq-hash-cache==0.1.0 \
     --hash=sha256:760b334b3003e4b96643192f8ddab843eab238e333ff53aecc177e6aaaa06672 \
