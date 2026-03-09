@@ -1515,8 +1515,8 @@ wheels = [
 
 [[package]]
 name = "xorq"
-version = "0.3.12"
-source = { git = "https://github.com/xorq-labs/xorq#964d7b2c6bae4d9daf81728c4508ee20e82acfc9" }
+version = "0.3.13"
+source = { git = "https://github.com/xorq-labs/xorq#4f4b53c58d4f18fae561ea362ffc2562c68728b1" }
 dependencies = [
     { name = "atpublic" },
     { name = "attrs", marker = "python_full_version < '4'" },
