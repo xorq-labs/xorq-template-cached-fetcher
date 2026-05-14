@@ -5,6 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.10"
 dependencies = [
     "cryptography>=45.0.5",
+    "uv>=0.9.18",
     "xorq>=0.3.1",
     "xorq-hash-cache>=0.1.0",
 ]

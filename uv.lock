@@ -1558,6 +1558,7 @@ version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "cryptography" },
+    { name = "uv" },
     { name = "xorq" },
     { name = "xorq-hash-cache" },
 ]
@@ -1571,6 +1572,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "cryptography", specifier = ">=45.0.5" },
+    { name = "uv", specifier = ">=0.9.18" },
     { name = "xorq", git = "https://github.com/xorq-labs/xorq" },
     { name = "xorq-hash-cache", specifier = ">=0.1.0" },
 ]
